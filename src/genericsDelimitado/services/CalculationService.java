@@ -14,7 +14,6 @@ public class CalculationService<T> implements Calculation, Comparable<T> {
 		for (int i = 1; i < list.size(); i++) {
 
 		}
-		System.out.println("Aqui deu ruim");
 	}
 
 	@Override
