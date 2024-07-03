@@ -28,7 +28,8 @@ public class Program {
 				list.add(new Product(val[0], Double.parseDouble(val[1])));
 				line = br.readLine();
 			}
-			cs.max(list);
+			Product max = cs.max(list);
+			System.out.println(max.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
