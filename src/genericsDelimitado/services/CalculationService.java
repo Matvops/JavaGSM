@@ -12,7 +12,9 @@ public class CalculationService<T> implements Calculation, Comparable<T> {
 
 		T max = list.get(0);
 		for (int i = 1; i < list.size(); i++) {
-
+			synchronized (list) {
+				
+			}
 		}
 	}
 
