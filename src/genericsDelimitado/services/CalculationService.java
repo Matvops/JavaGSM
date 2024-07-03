@@ -3,7 +3,7 @@ package genericsDelimitado.services;
 import java.util.Collections;
 import java.util.List;
 
-public class CalculationService<T> implements Calculation, Comparable<T> {
+public class CalculationService<T> implements Calculation {
 
 	@Override
 	public <T> void max(List<T> list) {
@@ -12,15 +12,10 @@ public class CalculationService<T> implements Calculation, Comparable<T> {
 
 		T max = list.get(0);
 		for (int i = 1; i < list.size(); i++) {
-			synchronized (list) {
-				
-			}
+		
 		}
 	}
 
-	@Override
-	public int compareTo(T o) {
-		return this.compareTo(o);
-	}
+	
 
 }

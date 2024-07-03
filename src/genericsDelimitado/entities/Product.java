@@ -1,6 +1,6 @@
 package genericsDelimitado.entities;
 
-public class Product {
+public class Product implements Comparable<Product>{
 	private String name;
 	private Double value;
 	
@@ -22,6 +22,13 @@ public class Product {
 		sb.append(this.getName());
 		sb.append("," + String.format("%.2f", this.value));
 		return sb.toString();
+	}
+
+
+
+	@Override
+	public int compareTo(Product o) {
+		return this.value.compareTo(o.getValue());
 	}
 	
 	
