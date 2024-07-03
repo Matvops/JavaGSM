@@ -1,5 +1,7 @@
 package curingas.services;
 
-public interface AreaServices {
+import java.util.List;
 
+public interface AreaServices {
+	public int totalArea(List<?> list);
 }
