@@ -10,6 +10,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import genericsDelimitado.entities.Product;
+import genericsDelimitado.services.CalculationService;
 
 public class Program {
 
@@ -18,7 +19,7 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		File path = new File("C:\\temp\\ws-eclipse\\generics\\genericDelimitado.txt");
 		List<Product> list = new LinkedList<>();
-		
+		CalculationService<Product> cs = new CalculationService<>();
 		
 		try(BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String line = br.readLine();
@@ -27,7 +28,7 @@ public class Program {
 				list.add(new Product(val[0], Double.parseDouble(val[1])));
 				line = br.readLine();
 			}
-			
+			cs.max(list);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
