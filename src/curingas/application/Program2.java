@@ -18,7 +18,7 @@ public class Program2 {
 		System.out.println(myObjs.toString());
 	}
 	
-	public static void copy(List<? extends Object> list, List<Object> listO) {
+	public static void copy(List<? extends Number> list, List<? super Number> listO) {
 		if(!listO.isEmpty()) {
 			listO.removeAll(listO);
 		}
