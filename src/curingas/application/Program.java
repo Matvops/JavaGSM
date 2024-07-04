@@ -8,6 +8,7 @@ import java.util.Scanner;
 import curingas.entities.Circle;
 import curingas.entities.Rectangle;
 import curingas.entities.Shape;
+import curingas.services.SumAreaServices;
 
 public class Program {
 
@@ -41,7 +42,8 @@ public class Program {
 					sc.nextLine();
 					shapes.add(new Rectangle(wid, alt));
 				} else if (r == 3) {
-
+					int soma = new SumAreaServices().totalArea(shapes);
+					System.out.println("Soma das areas: " + soma);
 				} else {
 					throw new IllegalArgumentException("Opção inválida");
 				}
