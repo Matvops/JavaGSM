@@ -1,9 +1,12 @@
 package exemplo.application;
 
+import exemplo.entities.Site;
+
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Site st = new Site();
+		st.interfaceLogin();
 
 	}
 
