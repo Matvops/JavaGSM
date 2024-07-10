@@ -52,7 +52,7 @@ public class Curso {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("\n-----------------------\n");
-		System.out.println("CURSO: " + this.nome);
+		sb.append("CURSO: " + this.nome);
 		sb.append("\nNOME PROFESSOR: " + this.professor.getNome());
 		sb.append("\nNÚMERO DE ALUNOS: " + this.alunos.size());
 		sb.append("\n-----------------------\n");

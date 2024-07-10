@@ -21,7 +21,7 @@ public abstract class Pessoa {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(code);
+		return Objects.hash(nome);
 	}
 
 	@Override
@@ -33,8 +33,11 @@ public abstract class Pessoa {
 		if (getClass() != obj.getClass())
 			return false;
 		Pessoa other = (Pessoa) obj;
-		return code == other.code;
+		return Objects.equals(code, other.code);
 	}
+
+	
+
 
 	
 	

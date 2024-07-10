@@ -11,8 +11,6 @@ public class Aluno extends Pessoa{
 		// TODO Auto-generated constructor stub
 	}
 	
-	 
-
 
 
 	public Set<Curso> getCursos() {
