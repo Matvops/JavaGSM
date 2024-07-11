@@ -3,15 +3,18 @@ package exercicioMap.application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import exercicioMap.services.Contagem;
+
 public class Program {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
+		Contagem ctg = new Contagem();
 		System.out.print("Digite o caminho: ");
 		String path = sc.nextLine();
-		
+		ctg.acessarArquivo(path);
+		System.out.println(ctg);
 		sc.close();
 	}
 

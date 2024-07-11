@@ -29,7 +29,23 @@ public class Contagem {
 	}
 	
 	public void contagem(String nome, Integer valor) {
-		votacao.put(nome, valor);
+		int num;
+		if(votacao.containsKey(nome)) {
+			num = votacao.get(nome);
+			votacao.put(nome, valor + num);
+		}
+		else 
+			votacao.put(nome, valor);
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for(String key : votacao.keySet()) {
+			sb.append(key + ": " + votacao.get(key) + "\n");
+		}
+		return sb.toString();
+	}
+	
 	
 }
